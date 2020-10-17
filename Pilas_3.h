@@ -334,6 +334,31 @@ namespace Projecto1GabrielMajano1202619 {
 				this->listBox3->Items->Add(list3->GetValue(i));
 			}
 		}
+		int data1=0;
+		int data2 = list2->GetValue(0);
+		int data3 = list3->GetValue(0);
+		for (int i = 0; i < pocisionTop1; i++)
+		{
+			//condiciones de  victoria
+			if (list1->GetValue(0) == list1->GetValue(i))
+			{
+				data1++;
+			}
+			if (list2->GetValue(0) == list2->GetValue(i))
+			{
+				data2++;
+			}
+			if (list3->GetValue(0) == list3->GetValue(i))
+			{
+				data3++;
+			}
+			if (data1 == pocisionTop1 && data2 == pocisionTop2 && data3  == pocisionTop3)
+			{
+				timer1->Stop();
+				String^ Victoria = "¡Usted a ganado! Le tomo:" + label_timer->Text;
+				MessageBox::Show(Victoria);
+			}
+		}
 	}
 private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) 
 {
