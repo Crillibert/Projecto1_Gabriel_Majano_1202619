@@ -1,0 +1,8 @@
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1_Gabriel_Majano_1202619.vcxprojAssemblyReference.cache
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1GabrielMajano1202619.Inicio.resources
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1_Gabriel_Majano_1202619.vcxproj.GenerateResource.cache
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1_Gabriel_Majano_1202619.exe
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1_Gabriel_Majano_1202619.pdb
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1GabrielMajano1202619.Pilas_3.resources
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1GabrielMajano1202619.Pilas_6.resources
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1GabrielMajano1202619.Pilas_8.resources

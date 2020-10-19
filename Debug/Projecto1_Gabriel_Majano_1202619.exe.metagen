@@ -1,0 +1,62 @@
+  Projecto1GabrielMajano1202619.Inicio.resources - Embedded, ContainedInManifestFile, 
+  Projecto1GabrielMajano1202619.Pilas_3.resources - Embedded, ContainedInManifestFile, 
+  Projecto1GabrielMajano1202619.Pilas_6.resources - Embedded, ContainedInManifestFile, 
+  Projecto1GabrielMajano1202619.Pilas_8.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Projecto1_Gabriel_Majano_1202619, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Projecto1GabrielMajano1202619.Pilas_3: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    List* list1 : Public
+    List* list2 : Public
+    System.Windows.Forms.Label label_dificultad : Public
+    List* list3 : Public
+    System.String mensajes : Public, Static
+    System.String dificultad : Public, Static
+Class Projecto1GabrielMajano1202619.Pilas_6: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    List* list1 : Public
+    List* list2 : Public
+    List* list3 : Public
+    List* list4 : Public
+    List* list5 : Public
+    List* list6 : Public
+    System.Windows.Forms.Label label_dificultad : Public
+    System.String mensajes : Public, Static
+    System.String dificultad : Public, Static
+Class Projecto1GabrielMajano1202619.Inicio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.ComboBox comboBox_dificultad : Public
+Class Projecto1GabrielMajano1202619.Pilas_8: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    List* list1 : Public
+    List* list2 : Public
+    List* list3 : Public
+    List* list4 : Public
+    List* list5 : Public
+    List* list6 : Public
+    List* list7 : Public
+    List* list8 : Public
+    System.Windows.Forms.Label label_dificultad : Public
+    System.String mensajes : Public, Static
+    System.String dificultad : Public, Static

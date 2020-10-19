@@ -1,0 +1,16 @@
+﻿  Inicio.cpp
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\List.h(1,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_3.h(70,13): warning C4101: 'bloque': variable local sin referencia
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_6.h(83,13): warning C4101: 'bloque': variable local sin referencia
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Inicio.cpp(7,15): warning C4551: la llamada a la función no tiene lista de argumentos
+  Pilas_6.cpp
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\List.h(1,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_6.h(83,13): warning C4101: 'bloque': variable local sin referencia
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_6.cpp(7,15): warning C4551: la llamada a la función no tiene lista de argumentos
+  Pilas_8.cpp
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\List.h(1,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_8.h(102,13): warning C4101: 'bloque': variable local sin referencia
+C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Pilas_8.cpp(7,15): warning C4551: la llamada a la función no tiene lista de argumentos
+  Generando código...
+  Inicio.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Projecto1_Gabriel_Majano_1202619.vcxproj -> C:\Users\emaja\source\repos\Projecto1_Gabriel_Majano_1202619\Debug\Projecto1_Gabriel_Majano_1202619.exe
