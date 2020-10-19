@@ -20,7 +20,6 @@ namespace Projecto1GabrielMajano1202619 {
 	{
 	public:
 		//funcion de la libreria IO para generar txt
-		static int datos;
 		static String^ mensajes= "";
 	public:
 		static String^ dificultad;
@@ -62,7 +61,7 @@ namespace Projecto1GabrielMajano1202619 {
 			list3->count = 0;
 			list3->start = nullptr;
 			list3->end = nullptr;
-			int datDiv = datos/3;
+			int datDiv = 4;
 			/*int blocks = Inicio::cajas;*/
 			for (int i = 0; i < datDiv; i++)
 			{
@@ -241,6 +240,7 @@ namespace Projecto1GabrielMajano1202619 {
 			this->Controls->Add(this->comboBox_mover);
 			this->Name = L"Pilas_3";
 			this->Text = L"Pilas_3";
+			this->Load += gcnew System::EventHandler(this, &Pilas_3::Pilas_3_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -351,6 +351,7 @@ namespace Projecto1GabrielMajano1202619 {
 					{
 						this->listBox1->Items->Add(list1->GetValue(i));
 					}
+					mensajes = mensajes + "p3->p1 \n";
 				}
 				if (cajaRecibir == "2")
 				{
@@ -362,6 +363,7 @@ namespace Projecto1GabrielMajano1202619 {
 					{
 						this->listBox2->Items->Add(list2->GetValue(i));
 					}
+					mensajes = mensajes + "p3->p2 \n";
 				}
 				for (int i = 0; i < pocisionTop3; i++)
 				{
@@ -406,7 +408,22 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
 {
 	tick++;
 	label_timer->Text = Convert::ToString(tick);
-
+	if (label_dificultad->Text=="Medio")
+	{
+		if (tick == 120)
+		{
+			timer1->Stop();
+			MessageBox::Show("Se acabo el tiempo");
+		}
+	}
+	if (label_dificultad->Text == "Dificil")
+	{
+		if (tick == 120)
+		{
+			timer1->Stop();
+			MessageBox::Show("Se acabo el tiempo");
+		}
+	}
 }
 private: System::Void button_regresar_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -416,6 +433,8 @@ private: System::Void button_regresar_Click(System::Object^ sender, System::Even
 	registro->WriteLine(mensajes);
 	registro->Close();
 	this->Close();
+}
+private: System::Void Pilas_3_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

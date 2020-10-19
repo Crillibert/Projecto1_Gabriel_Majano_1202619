@@ -124,6 +124,8 @@
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Pilas_3.cpp" />
+    <ClCompile Include="Pilas_6.cpp" />
+    <ClCompile Include="Pilas_8.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +137,12 @@
     <ClInclude Include="Pilas_3.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Pilas_6.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Pilas_8.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pilas_3.resx">
       <DependentUpon>Pilas_3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pilas_6.resx">
+      <DependentUpon>Pilas_6.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pilas_8.resx">
+      <DependentUpon>Pilas_8.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

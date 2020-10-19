@@ -1,5 +1,6 @@
 #pragma once
 #include "Pilas_3.h"
+#include "Pilas_6.h"
 namespace Projecto1GabrielMajano1202619 {
 
 	using namespace System;
@@ -131,6 +132,7 @@ namespace Projecto1GabrielMajano1202619 {
 			this->button1->TabIndex = 6;
 			this->button1->Text = L"Instrucciones";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Inicio::button1_Click);
 			// 
 			// comboBox_dificultad
 			// 
@@ -186,10 +188,18 @@ private: System::Void button_Inicio_Click(System::Object^ sender, System::EventA
 	if (comboBox1->Text == "3" && !String::IsNullOrEmpty(comboBox_dificultad->Text))
 	{
 		Pilas_3^ p3 = gcnew Pilas_3;
+		//descubri que asi se pueden pasar datos
 		p3->label_dificultad->Text = comboBox_dificultad->Text;
-		p3->datos = cajas;
 		this->Hide();
 		p3->ShowDialog();
+		this->Show();
+	}
+	if (comboBox1->Text == "6" && !String::IsNullOrEmpty(comboBox_dificultad->Text))
+	{
+		Pilas_6^ p6 = gcnew Pilas_6;
+		p6->label_dificultad->Text = comboBox_dificultad->Text;
+		this->Hide();
+		p6->ShowDialog();
 		this->Show();
 	}
 	else
@@ -200,6 +210,10 @@ private: System::Void button_Inicio_Click(System::Object^ sender, System::EventA
 	}
 }
 private: System::Void textBox_bloques_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	MessageBox::Show("Su objetivo es mover los numeros \n de manera que cada numero quede en su propia pila");
 }
 };
 }
