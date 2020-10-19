@@ -15,8 +15,6 @@ namespace Projecto1GabrielMajano1202619 {
 	public ref class Inicio : public System::Windows::Forms::Form
 	{
 	public:
-		static int cajas;
-	public:
 		Inicio(void)
 		{
 			InitializeComponent();
@@ -44,7 +42,15 @@ namespace Projecto1GabrielMajano1202619 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button_salir;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::TextBox^ textBox_bloques;
+	public: System::Windows::Forms::ComboBox^ comboBox_dificultad;
+	private:
+
+
+	private:
+
+
+	private:
+
 
 	private:
 		/// <summary>
@@ -65,14 +71,14 @@ namespace Projecto1GabrielMajano1202619 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button_salir = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->textBox_bloques = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox_dificultad = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"3", L"4", L"5", L"6", L"7", L"8" });
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"3", L"6", L"8" });
 			this->comboBox1->Location = System::Drawing::Point(37, 129);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(259, 24);
@@ -101,11 +107,11 @@ namespace Projecto1GabrielMajano1202619 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(502, 91);
+			this->label1->Location = System::Drawing::Point(534, 91);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(131, 17);
+			this->label1->Size = System::Drawing::Size(82, 17);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"¿Cuantos Bloques\?";
+			this->label1->Text = L"¿Dificultad\?";
 			// 
 			// button_salir
 			// 
@@ -126,20 +132,22 @@ namespace Projecto1GabrielMajano1202619 {
 			this->button1->Text = L"Instrucciones";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
-			// textBox_bloques
+			// comboBox_dificultad
 			// 
-			this->textBox_bloques->Location = System::Drawing::Point(439, 131);
-			this->textBox_bloques->Name = L"textBox_bloques";
-			this->textBox_bloques->Size = System::Drawing::Size(259, 22);
-			this->textBox_bloques->TabIndex = 7;
-			this->textBox_bloques->TextChanged += gcnew System::EventHandler(this, &Inicio::textBox_bloques_TextChanged);
+			this->comboBox_dificultad->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_dificultad->FormattingEnabled = true;
+			this->comboBox_dificultad->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Facil", L"Medio", L"Dificil" });
+			this->comboBox_dificultad->Location = System::Drawing::Point(439, 129);
+			this->comboBox_dificultad->Name = L"comboBox_dificultad";
+			this->comboBox_dificultad->Size = System::Drawing::Size(259, 24);
+			this->comboBox_dificultad->TabIndex = 7;
 			// 
 			// Inicio
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(743, 344);
-			this->Controls->Add(this->textBox_bloques);
+			this->Controls->Add(this->comboBox_dificultad);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->button_salir);
 			this->Controls->Add(this->label1);
@@ -161,27 +169,34 @@ namespace Projecto1GabrielMajano1202619 {
 	}
 private: System::Void button_Inicio_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	if (int::TryParse(textBox_bloques->Text, cajas))
+	int cajas;
+	if (comboBox_dificultad->Text == "Facil")
 	{
-		if (Convert::ToInt16(textBox_bloques->Text)>10 && Convert::ToInt16(textBox_bloques->Text) < 30)
-		{
-			cajas = Convert::ToInt16(textBox_bloques->Text);
-			if (comboBox1->Text == "3")
-			{
-				Pilas_3^ p3 = gcnew Pilas_3;
-				this->Hide();
-				p3->ShowDialog();
-				this->Show();
-			}
-		}
-		else
-		{
-			textBox_bloques->Text = "";
-		}
+		cajas = 9;
+	}
+	else if (comboBox_dificultad->Text == "Medio")
+	{
+		cajas = 15;
+	}
+	else if (comboBox_dificultad->Text == "Dificil")
+	{
+		cajas = 18;
+	}
+	//condicion para que se inicie, si alguno de los campos esta vacio no pasa al siguiente formulario
+	if (comboBox1->Text == "3" && !String::IsNullOrEmpty(comboBox_dificultad->Text))
+	{
+		Pilas_3^ p3 = gcnew Pilas_3;
+		p3->label_dificultad->Text = comboBox_dificultad->Text;
+		p3->datos = cajas;
+		this->Hide();
+		p3->ShowDialog();
+		this->Show();
 	}
 	else
 	{
-		textBox_bloques->Text = "";
+		//error message, algo generico pero funciona
+		String^ error = "Porfavor llene todos los campos requeridos";
+		MessageBox::Show(error);
 	}
 }
 private: System::Void textBox_bloques_TextChanged(System::Object^ sender, System::EventArgs^ e) {
